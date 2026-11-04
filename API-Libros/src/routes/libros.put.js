@@ -5,7 +5,7 @@ const path = require('path');
 
 const rutaLibros = path.join(__dirname, '../data/libros.json');
 
-router.put('/libros/:id', (req, res) => {
+router.put('/api/books/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const libro = req.body;
     const libros = JSON.parse(fs.readFileSync(rutaLibros, 'utf8'));
